@@ -40,12 +40,12 @@ pto(1).location = [0 0 0];                   % PTO Location [m]
 %% PTO-Sim block definition
 
 ptoSim(1) = ptoSimClass('ddLinearGen');
-ptoSim(1).directLinearGenerator.Rs = 4.58;
-ptoSim(1).directLinearGenerator.Bfric = -100;
-ptoSim(1).directLinearGenerator.tau_p = 0.072;
-ptoSim(1).directLinearGenerator.lambda_fd = 8;
-ptoSim(1).directLinearGenerator.Ls = 0.285;
-ptoSim(1).directLinearGenerator.theta_d_0 = 0;
-ptoSim(1).directLinearGenerator.lambda_sq_0 = 0;
-ptoSim(1).directLinearGenerator.lambda_sd_0 = ptoSim(1).directLinearGenerator.lambda_fd;
-ptoSim(1).directLinearGenerator.Rload = -117.6471;
+ptoSim(1).directLinearGenerator.Rs = 4.58; % Winding resistance (ohm)
+ptoSim(1).directLinearGenerator.Bfric = -100; % Friction Coefficient (kg/s)
+ptoSim(1).directLinearGenerator.tau_p = 0.072; % Magnetic pole pitch (m)
+ptoSim(1).directLinearGenerator.lambda_fd = 8; % flow linkage fd
+ptoSim(1).directLinearGenerator.Ls = 0.285; % winding inductance (H)
+ptoSim(1).directLinearGenerator.theta_d_0 = 0; % initial rotor frame angle (rad)
+ptoSim(1).directLinearGenerator.lambda_sq_0 = 0; % initial stator q-axis flow linkage
+ptoSim(1).directLinearGenerator.lambda_sd_0 = ptoSim(1).directLinearGenerator.lambda_fd; % initial stator d-axis flow linkage = flow linkage fd
+ptoSim(1).directLinearGenerator.Rload = -117.6471; % External load resistance (ohm)

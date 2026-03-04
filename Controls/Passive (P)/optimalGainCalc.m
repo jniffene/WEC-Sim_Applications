@@ -6,7 +6,7 @@ close all; clear all; clc;
 
 % Inputs (from wecSimInputFile)
 simu = simulationClass();
-body(1) = bodyClass('../hydroData/sphere.h5');
+body(1) = bodyClass('../../_Common_Input_Files/Sphere/hydroData/sphere.h5');
 waves.height = 2.5;
 waves.period = 9.6664; % One of periods from BEM
 
